@@ -8,7 +8,7 @@ from importlib import import_module as use
 async_comprehension = use('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime():
+async def measure_runtime() -> float:
     """ Measures the runtime of async_comprehension. """
     s = time.time()
     await asyncio.gather(*(async_comprehension() for _ in range(4)))
